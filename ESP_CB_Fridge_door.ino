@@ -223,32 +223,7 @@ void setup() {
 
 
 
-void __loop()
-// Test loop to test out the Reboot reporting email stuff
-{
-  Serial.print("Loop : ");
-  Serial.println(loop_count);
-  
-  AsyncElegantOTA.loop();
-  
-  display.clearDisplay();
 
-  ScreenPrint(String(loop_count), 5, 10, 2);
-
-  display.display();
-
-  delay(500);
-  loop_count++;
-  
-  if (loop_count > 99)
-  {
-        EEPROM.write( 0 ,  EEPROM_REBOOTED_CODE) ;
-        EEPROM.commit();  
-          
-        ESP.restart();        
-    
-  }
-}
 
 
 
