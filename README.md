@@ -16,7 +16,9 @@ This is getting its IP address via DHCP - which does seem to cause some problems
 Since been informed that its more if you use fixed IP addressing - still testing that 
 
 To switch to Fixed IP addressing
+
 Add these variables
+
 ===================
 // Set your Static IP address
 
@@ -38,7 +40,7 @@ Add a variation of this code at about line 175 (before the connect to Wi-Fi) to 
 
 ======================
 
-#if (FIXED_IP == 1)
+if (FIXED_IP == 1)
 
   // Set up for FIXED IP address
 
@@ -48,7 +50,7 @@ Add a variation of this code at about line 175 (before the connect to Wi-Fi) to 
     
   }
   
-#endif  
+endif  
 =====================
 
 There is another version of the code which I was experimenting with the multi tasking features of the RTOS on the ESP32 
