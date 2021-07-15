@@ -20,6 +20,7 @@ To switch to Fixed IP addressing
 Add these variables
 
 ===================
+
 // Set your Static IP address
 
 IPAddress local_IP(192, 168, x, xxx);
