@@ -28,7 +28,7 @@ IPAddress primaryDNS(8, 8, 8, 8); // optional   - NOTE : These are NOT optional!
 IPAddress secondaryDNS(8, 8, 4, 4); // optional - NOTE : These are NOT optional !
 
 
-Add a variation of this code at about line xxx to switch to fixed IP addressing
+Add a variation of this code at about line 175 (before the connect to Wi-Fi) to switch to fixed IP addressing
 ======================
 #if (FIXED_IP == 1)
   // Set up for FIXED IP address
@@ -39,4 +39,6 @@ Add a variation of this code at about line xxx to switch to fixed IP addressing
 #endif  
 =====================
 
-There is another version of the code which uses the multi tasking features of the RTOS on the ESP32  - to use a seperate task to update ThingSpeak, and another to run the buzzer
+There is another version of the code which I was experimenting with the multi tasking features of the RTOS on the ESP32 
+This uses a seperate task to update ThingSpeak, and another to run the buzzer
+But I ran into various crashng problems mainly due to overrunning the stack and a couple of other odd errors 
