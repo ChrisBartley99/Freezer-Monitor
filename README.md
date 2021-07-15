@@ -19,23 +19,35 @@ To switch to Fixed IP addressing
 Add these variables
 ===================
 // Set your Static IP address
+
 IPAddress local_IP(192, 168, x, xxx);
+
 // Set your Gateway IP address
+
 IPAddress gateway(192, 168, x, 1);
 
 IPAddress subnet(255, 255, 1, 0);
+
 IPAddress primaryDNS(8, 8, 8, 8); // optional   - NOTE : These are NOT optional!
+
 IPAddress secondaryDNS(8, 8, 4, 4); // optional - NOTE : These are NOT optional !
 
 
+
 Add a variation of this code at about line 175 (before the connect to Wi-Fi) to switch to fixed IP addressing
+
 ======================
+
 #if (FIXED_IP == 1)
+
   // Set up for FIXED IP address
 
   if (!WiFi.config(local_IP, gateway, subnet, primaryDNS, secondaryDNS)) {
+  
     Serial.println("STA Failed to configure");
+    
   }
+  
 #endif  
 =====================
 
