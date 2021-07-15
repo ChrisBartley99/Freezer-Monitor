@@ -41,7 +41,7 @@ Add a variation of this code at about line 175 (before the connect to Wi-Fi) to 
 
 ======================
 
-if (FIXED_IP == 1)
+if (FIXED_IP == 1) {
 
   // Set up for FIXED IP address
 
@@ -51,7 +51,7 @@ if (FIXED_IP == 1)
     
   }
   
-endif  
+}
 =====================
 
 There is another version of the code which I was experimenting with the multi tasking features of the RTOS on the ESP32 
